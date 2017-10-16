@@ -1,9 +1,7 @@
 package com.stackroute.datamunger;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
-
 import com.stackroute.datamunger.query.DataTypeDefinitions;
 import com.stackroute.datamunger.query.Header;
 import com.stackroute.datamunger.reader.CsvQueryProcessor;
@@ -16,6 +14,7 @@ public class DataMunger {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter a File Name:");
 		String file = scan.nextLine();
+		scan.close();
 		//read the file name from the user
 		
 		CsvQueryProcessor cqp = new CsvQueryProcessor(file);
