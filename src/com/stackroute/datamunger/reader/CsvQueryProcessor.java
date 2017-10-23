@@ -13,7 +13,8 @@ import com.stackroute.datamunger.query.Header;
 
 public class CsvQueryProcessor extends QueryProcessingEngine {
 
-	ArrayList<String> lines = new ArrayList<String>();
+	private static ArrayList<String> lines = new ArrayList<String>();
+	
 	public CsvQueryProcessor(String fileName) throws FileNotFoundException {
 		String line = null;
 		BufferedReader reader = null;
@@ -82,7 +83,7 @@ private String[] findColumnType(){
 			}catch(NumberFormatException ex) {
 				if(dtypes[i].contains("/")|| dtypes[i].contains("-")||dtypes[i].contains(".")) {
 					Object I = checkdate(dtypes[i]);
-					System.out.println("In Date" +I);
+					//System.out.println("In Date" +I);
 					o[i] = I.getClass().getName();
 				}else { 
 					if(dtypes[i].equals("s")) {
@@ -97,7 +98,7 @@ private String[] findColumnType(){
 	}
 	for(int i=0;i<o.length;i++) {
 		dtypes[i]= (String) o[i];
-		System.out.println(dtypes[i]);
+		//System.out.println(dtypes[i]);
 	}
 	return dtypes;
 	}
@@ -138,7 +139,7 @@ private String[] findColumnType(){
 				return null;
 			}
 		}catch(Exception e) {
-			System.out.println("Chec the Date Format ,achlps");
+			//System.out.println("Check the Date Format ,achlps");
 			e.printStackTrace();
 		}
 		return date;

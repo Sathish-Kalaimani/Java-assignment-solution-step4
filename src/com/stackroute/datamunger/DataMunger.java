@@ -33,16 +33,16 @@ public class DataMunger {
 		 * of column data types which is actually the object of DataTypeDefinitions
 		 * class
 		 */
-			for(String h: headers.getHeaders()) {
-				System.out.println(h);
+			for(String head: headers.getHeaders()) {
+				System.out.println(head);
 			}
 		
 		/*
 		 * display the columnName from the header object along with its data type from
 		 * DataTypeDefinitions object
 		 */
-			for(String h: types.getDataTypes()) {
-				System.out.println(h);
+			for(String head: types.getDataTypes()) {
+				System.out.println(head);
 			}
 		
 		
